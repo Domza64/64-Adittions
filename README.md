@@ -1,4 +1,4 @@
-![title](src/main/resources/assets/additions_mod/icon.png)<br><br>
+![title](icon/icon128.png)<br>
 
 # 64 Adittions
 
