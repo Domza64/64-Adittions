@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "additions",
+  "version": "${version}",
+
+  "name": "64 Additions",
+  "description": "This is description of 64 Additions mod!",
+  "authors": [
+    "Domza64"
+  ],
+  "contact": {
+    "sources": "https://github.com/Domza64/64-Adittions"
+  },
+
+  "license": "GNU General Public License v3.0",
+  "icon": "assets/additions_mod/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "additions.AdditionsMod"
+    ],
+    "client": [
+      "additions.client.AdditionsModClient"
+    ]
+  },
+  "mixins": [
+    "additions.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
