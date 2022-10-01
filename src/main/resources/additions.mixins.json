@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "AdditionsModMixin"
+    "LanternMixin"
   ],
   "injectors": {
     "defaultRequire": 1

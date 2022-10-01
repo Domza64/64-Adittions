@@ -1,8 +1,7 @@
-package additions.block;
+package additions.block.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.LanternBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -29,5 +28,15 @@ public class WallLantern extends Block {
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
+    }
+
+    protected static Direction attachedDirection(BlockState state) {
+        return Direction.UP;
+    }
+
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        Direction direction = WallLantern.attachedDirection(state).getOpposite();
+        return !Block.sideCoversSmallSquare(world, pos.offset(direction), direction.getOpposite());
     }
 }
