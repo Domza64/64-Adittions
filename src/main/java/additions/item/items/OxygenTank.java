@@ -37,6 +37,8 @@ public class OxygenTank extends Item { // implements Wearable, if implement this
         return TypedActionResult.fail(itemStack);
     }
 
+    // TODO - Only bew able to put oxy tank if not submerged in water.
+
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!entity.isSubmergedInWater()) {
